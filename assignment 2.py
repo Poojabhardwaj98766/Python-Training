@@ -1,9 +1,9 @@
-"""########## answer 1 #################
+########## answer 1 #################
 num=input("enter the num:")
 if(num[::-1]==num):
     print("yes")
 else:
-    print("no")"""
+    print("no")
 
 ############# answer 5 ############
 
@@ -42,11 +42,10 @@ while True:
      else:
              print("invalid")
 `11`
-              
+             
 
-########### answer 2 ############
-
-"""factorial=1
+########### answer 2 ########
+factorial=1
 num=int(input("enter the value of num:"))
 if num<0:
           print("invalid number")
@@ -106,7 +105,7 @@ print()
 for x in range(5):
     for y in range(6):
 
-      print("*",end=" ")
+      print("*",end =" ")
     print()
 
 
@@ -150,6 +149,7 @@ for i in range(1, rows+1):
    
     k = 0
     print()
+    
 
 ############### answer 7 ##################
 
@@ -211,8 +211,29 @@ for x in range(num):
   print("sum:",sum)
   l1.append(a)
 print(l1)
-print("total sum of all elements in list:",sum)"""
+print("total sum of all elements in list:",sum)
 
+################ answer 12 ############
+print()
+print("########### ANSWER 12 (average,max) #############")
+print()
+num=int(input("num:"))
+sum=0
+l1=[]
+for x in range(num):
+  a=input("enter number")
+  sum=int(sum) + int(a)
+  
+  l1.append(a)
+
+print("sum:",sum)
+average=sum/num
+print("average :",sum,"/",num,":",average)
+print("max of list:",max(l1))
+print("min of list:",min(l1))
+
+
+############ answer 13 ##############
 
 
 
