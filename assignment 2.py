@@ -77,8 +77,6 @@ print(Fibonacci(n))
 n=int(input("n="))
 def Fibonacci(n):
    
-    # Check if input is 0 then it will
-    # print incorrect input
     if n < 0:
         print("Incorrect input")
  
@@ -87,8 +85,6 @@ def Fibonacci(n):
     elif n == 0:
         return 0
  
-    # Check if n is 1,2
-    # it will return 1
     elif n == 1 or n == 2:
         return 1
  
@@ -187,7 +183,7 @@ area=l*b
 print("area:",area)
 
 
-############# ANSWER############
+############# ANSWER 10 ############
 
 print()
 print("########### ANSWER 10 (REVERSE A LIST) #############")
@@ -232,9 +228,127 @@ print("average :",sum,"/",num,":",average)
 print("max of list:",max(l1))
 print("min of list:",min(l1))
 
+############## answer 14 ###################
 
-############ answer 13 ##############
+def dictionary(l1,l2,l3):
+    result=[{x:{y:z}} for (x,y,z) in zip(l1,l2,l3)]
+    return result
+s1=[]
+num=int(input("num:"))
+for x in range(num):
+  a=input("enter number")
+  s1.append(a)
+print("s1:",s1)
+s2=[]
+num=int(input("num:"))
+for y in range(num):
+  a=input("enter number")
+  s2.append(a)
+print("s2:",s2)
+s3=[]
+num=int(input("num:"))
+for z in range(num):
+  a=input("enter number")
+  s3.append(a)
+print("s3:",s3)
+print("original string:")
+print("s1:",s1)
+print("s2:",s2)
+print("s3:",s3)
+print("nested dictionary:")
+ch='a'
+print( "result",dictionary(s1,s2,s3))
 
+
+
+############ answer 15 ##############
+
+
+s1=set()
+n=int(input("num:"))
+for x in range (n):
+    x=input("enter number or string:")
+    s1.add(x)
+print("s1:"s1)
+s2=set()
+m=int(input("num:"))
+for y in range (m):
+    y=input("enter the number or string of set:")
+    s2.add(y)
+print("s2:",s2)
+print()
+print("s2 is subset of s1",s1.issubset(s2))
+print("s1 is subset of s2",s1.issubset(s2))
+print("subset not exist")
+
+
+######### answer 16 #####################
+
+s1=set()
+n=int(input("num:"))
+for x in range (n):
+    x=input("enter number or string:")
+    s1.add(x)
+print("s1:",s1)
+s2=set()
+m=int(input("num:"))
+for y in range (m):
+    y=input("enter the number or string of set:")
+    s2.add(y)
+print("s2:",s2)
+r1=s1.difference(s2)
+print("set differnce s1-s2 :",r1)
+r2=s2.difference(s1)
+print("set differnce s2-s1 :",r2)
+t1=s1.symmetric_difference(s2)
+print("symmetric differnce s1-s2 :",t1)
+t2=s2.symmetric_difference(s1)
+print("symmetric differnce s2-s1 :",t2)
+
+
+
+
+
+
+############## ANSWER 17 #########
+
+def Remove(tuples):
+    for i in tuples:
+        if(len(i)==0):
+            tuples.remove(i)
+    return tuples
+
+tuples = [(), ('ram','15','8'), (), ('laxman', 'sita'),
+        ('krishna', 'akbar', '45'), ('',''),()]
+print(Remove(tuples)) 
+
+
+########## ANSWER 18 ################3
+print("17.")
+L = [(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')]
+L = [t for t in L if t]
+print(L)
+
+############### ANSSWER 19 ###############
+lower, upper, special, digit = 0, 0, 0, 0
+password = input("Enter your password")
+if (len(password) >= 6):
+    for i in password:
+        for word in password.split():
+            if(word[0].isupper()):
+                upper += 1
+        if(i.islower()):
+            lower += 1
+        if(i.isdigit()):
+            digit += 1
+        if(i == '@' or i == '$' or i == '_' or i == '#' or i=='&'):
+            special += 1
+else:
+    print("Password should be more than 6 characters")
+if (lower >= 1 and upper >= 1 and special >= 1 and digit >= 1):
+    print("Valid Password")
+else:
+    print("Invalid Password")
 
 
 

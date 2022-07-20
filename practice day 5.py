@@ -14,7 +14,7 @@ print('glo',a)
 g()
 print('glo',a)
 h()
-print('glo',a)"""
+print('glo',a)
 
 def f1():
     a=10
@@ -24,5 +24,21 @@ def f2():
     a=40
     print()
     f2()
-f1()
-          
+f1()"""
+
+##class and object
+
+class record():
+    def name(self):
+        n=str(input("enter the name:"))
+        print("name:",n)
+obj=record()
+obj.name()
+
+###
+class record():
+    def num(self,a,b):
+        
+        print(a+b)
+obj=record()
+obj.num(7,8)
